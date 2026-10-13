@@ -1,0 +1,36 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="#a6232c"/>
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+    </Window.Resources>
+    <DockPanel>
+        <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" Background="#CC0000" Height="70">
+            <Image Source="/img/finsky.png" Width="40" Margin="10,0,0,0"/>
+            <TextBlock Text="АлкоРай" FontSize="50" Foreground="White" Margin="10,0"/>
+            <Image Source="/img/finsky.png" Width="40"/>
+
+            <Separator Width="50" Margin="10"/>
+
+            <Button Content="Добавить" Width="100" Height="40" Margin="10,0" Click="Add_Click"/>
+            <Button Content="Удалить" Width="100" Height="40" Margin="10,0" Click="Delete_Click"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Vertical" DockPanel.Dock="Left" Background="#A5A5A5" Width="150">
+            <Button Content="Каталог" Margin="5" Click="Catalog_Click"/>
+            <Button Content="О программе" Margin="5" Click="About_Click"/>
+        </StackPanel>
+
+        <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden" Background="#BEBEBE"/>
+    </DockPanel>
+
+</Window>
